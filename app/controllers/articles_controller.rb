@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
 
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
   def index
   	# fetching all articles from the database
-  	@articles = Article.all
+  	@articles = Article.page params[:page]
   end
   
   def show
@@ -48,8 +49,10 @@ class ArticlesController < ApplicationController
   	end
 
 
+
+
   	private 
   		def article_params
-  			params.require(:article).permit(:title, :body)
+  			params.require(:article).permit(:title, :body, :cover_image)
   		end
 end
