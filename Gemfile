@@ -60,3 +60,9 @@ gem 'devise'
 gem 'carrierwave', '~> 2.0'
 
 gem 'kaminari'
+
+gem "aws-sdk-s3", require: false
+
+gem "azure-storage", require: false
+
+gem "google-cloud-storage", "~> 1.11", require: false
