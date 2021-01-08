@@ -66,3 +66,13 @@ gem "aws-sdk-s3", require: false
 gem "azure-storage", require: false
 
 gem "google-cloud-storage", "~> 1.11", require: false
+
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
+gem 'omniauth-github'
+
+gem 'omniauth-google-oauth2'
+
+gem 'activerecord-session_store'
