@@ -5,23 +5,31 @@
         <div class="card-body">
           <h2 class="card-title text-center">Log in</h2>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter email"%>
+          <div class="ui form">
+            <div class="required field">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter email"%>
+            </div>
           </div>
-          <div class="form-group">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Enter password" %>
+          <div class="ui form">
+            <div class="required field">
+              <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Enter password" %>            
+            </div>
           </div>
           <% if devise_mapping.rememberable? %>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
+          <div class="required inline field">
+            <div class="ui checkbox">
+              <div>
+                <%= f.check_box :remember_me, tabindex: "0", class: "hidden" %>
+                <%= f.label :remember_me %>
+              </div>
+            </div>
           </div>
           <% end %>
 
           <div class="actions">
-            <%= f.submit "Log in", class: "btn btn-success btn-lg btn-block" %>
+            <%= f.submit "Log in", class: "fluid ui inverted blue button" %>
           </div>
 
           <% end %>

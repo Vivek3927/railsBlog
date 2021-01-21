@@ -8,6 +8,8 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "./src/application.scss";
+import "bootstrap"
+require("semantic-ui-sass");
 
 document.addEventListener('turbolinks:load', () => {
 	$('[data-toggle="tooltip"]').tooltip()

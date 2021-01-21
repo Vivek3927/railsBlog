@@ -45,34 +45,21 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+gem 'capybara', '>= 3.26'
+gem 'selenium-webdriver'
+gem 'webdrivers'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'devise'
-
 gem 'carrierwave', '~> 2.0'
-
 gem 'kaminari'
-
 gem "aws-sdk-s3", require: false
-
 gem "azure-storage", require: false
-
 gem "google-cloud-storage", "~> 1.11", require: false
-
-gem 'omniauth'
-
+gem "omniauth", "~> 1.9.1"
 gem 'omniauth-facebook'
-
 gem 'omniauth-github'
-
 gem 'omniauth-google-oauth2'
-
 gem 'activerecord-session_store'
+gem 'semantic-ui-sass'
+gem 'activeadmin'

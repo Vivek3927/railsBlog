@@ -6,16 +6,17 @@
 					<h2 class="card-title text-center">Forgot your password?</h2>
 					<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 					<%= render "users/shared/error_messages", resource: resource %>
-					<div class="form-group">
-						<%= f.label :email %><br />
-						<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Reset password" %>
-					</div>
+					<div class="ui form">
+						<div class="field">
+							<%= f.label :email %><br />
+							<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Reset password" %>
+						</div>
 
-					<div class="actions">
-						<%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+						<div class="actions">
+							<%= f.submit "Send me reset password instructions", class: "fluid ui inverted green button" %>
+						</div>
 					</div>
 					<% end %>
-
 					<%= render "users/shared/links" %>
 				</div>
 			</div>

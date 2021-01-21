@@ -3,23 +3,19 @@
 		<h1 class="text-info ml-3">Article's</h1>
 		<ul class="list-unstyled m-3">
 			<li>
-				<a class="list-decoration-none"><%= link_to "Add New Article", new_article_path %></a>
+				<%= link_to "Add New Article", new_article_path, class: "list-decoration-none" %>
 			</li>
 		</ul>
 	</div>
-	<a><%= link_to "Log_out", destroy_user_session_path %></a>
+	<%= link_to "Log_out", destroy_user_session_path %>
 </nav>
-
-<!-- <h3 class="text-center mt-3">Our blog has <%#= Article.public_count %> articles add counting!</h3> -->
-
 <div class="container mt-4">
 	<div class="col-5 mx-auto">
 		<table class="table p-2">
 			<thead class="table-dark">
-				<tr >
+				<tr>
 					<th class="text-center font-weight-bold">ARTICLE'S</th>
 				</tr>
-
 			</thead>
 			<% @articles.each do |article| %>
 			<tbody >
@@ -34,5 +30,3 @@
 		<%= paginate @articles %>
 	</div>
 </div>
-
- 
